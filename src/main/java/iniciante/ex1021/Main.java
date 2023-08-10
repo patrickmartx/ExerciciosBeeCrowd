@@ -16,6 +16,8 @@ public class Main {
             throw new InvalidParameterException("Número inválido!");
         else
             tratar.printaQuantidadeMinimaDeNotas(valorMonetario);
+        
+        input.close();
 
     }
 }
