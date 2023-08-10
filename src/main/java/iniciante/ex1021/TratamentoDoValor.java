@@ -34,7 +34,7 @@ public class TratamentoDoValor {
 
         int[] quantidadeNotas = new int[notasDisponiveis];
 
-        for (int i = 0; i < quantidadeNotas.length; i++) {
+        for (int i = 0; i < notasDisponiveis; i++) {
             quantidadeNotas[i] = (int) (valor / notas[i]);
             valor %= notas[i];
         }
@@ -46,16 +46,16 @@ public class TratamentoDoValor {
         int cincoReaisUsados = 5;
         int doisReaisUsados = 2;
 
-        int notasDisponiveis = 6;
+        int moedasDisponiveis = 6;
         int converteCentavosEmReais = 100;
 
         valor = (((valor % casaDasUnidades) % cincoReaisUsados) % doisReaisUsados);
 
         double valorComCentavos = valor * converteCentavosEmReais;
 
-        int[] quantiadeMoedas = new int[notasDisponiveis];
+        int[] quantiadeMoedas = new int[moedasDisponiveis];
 
-        for (int i = 0; i < quantiadeMoedas.length; i++) {
+        for (int i = 0; i < moedasDisponiveis; i++) {
             quantiadeMoedas[i] = (int) (valorComCentavos / (moedas[i] * converteCentavosEmReais));
             valorComCentavos %= (moedas[i] * converteCentavosEmReais);
         }
