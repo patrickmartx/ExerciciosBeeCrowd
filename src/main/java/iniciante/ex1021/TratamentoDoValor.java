@@ -9,7 +9,7 @@ public class TratamentoDoValor {
         return true;
     }
 
-    public static void printaQuantidadeMinimaDeNotas(double valor) {
+    public void printaQuantidadeMinimaDeNotas(double valor) {
         double[] notas = { 100.00, 50.00, 20.00, 10.00, 5.00, 2.00 };
         double[] moedas = { 1.00, 0.50, 0.25, 0.10, 0.05, 0.01 };
 
@@ -29,7 +29,7 @@ public class TratamentoDoValor {
         }
     }
 
-    public static int[] separaQuantidadeDeNotas(double[] notas, double valor) {
+    public int[] separaQuantidadeDeNotas(double[] notas, double valor) {
         int notasDisponiveis = 6;
 
         int[] quantidadeNotas = new int[notasDisponiveis];
@@ -41,7 +41,7 @@ public class TratamentoDoValor {
         return quantidadeNotas;
     }
 
-    public static int[] separaQuantidadeDeMoedas(double[] moedas, double valor) {
+    public int[] separaQuantidadeDeMoedas(double[] moedas, double valor) {
         int casaDasUnidades = 10;
         int cincoReaisUsados = 5;
         int doisReaisUsados = 2;
